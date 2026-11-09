@@ -1,0 +1,5 @@
+import { motion } from 'framer-motion'
+import { Sparkles, Ear, UsersRound, Clock3, Puzzle, BookOpen, RefreshCw, ShieldCheck } from 'lucide-react'
+import '../styles/Strengths.css'
+const strengths=[['Quick learner',Sparkles],['Good listener',Ear],['Teamwork',UsersRound],['Time management',Clock3],['Problem solving',Puzzle],['Continuous learning',BookOpen],['Adaptability',RefreshCw],['Responsibility',ShieldCheck]]
+export default function Strengths(){return <section className="section strengths-section"><div className="section-head"><span className="section-kicker">HOW I WORK</span><h2>Good work starts <span>with good habits.</span></h2><p>Traits I bring to every team, challenge, and new opportunity.</p></div><div className="strength-grid">{strengths.map(([s,Icon],i)=><motion.div className="strength-card" key={s} whileHover={{y:-4}} initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:i*.05}} viewport={{once:true}}><span className="strength-icon"><Icon size={17}/></span><span>{s}</span><i>0{i+1}</i></motion.div>)}</div></section>}

@@ -1,0 +1,5 @@
+import { ArrowUp } from 'lucide-react'
+import { GithubMark, LinkedinMark } from './BrandIcons.jsx'
+import '../styles/Footer.css'
+const links=[['About','about'],['Experience','experience'],['Skills','skills'],['Projects','projects'],['Resume','resume'],['Contact','contact']]
+export default function Footer(){return <footer className="footer"><div className="footer-main"><a href="#home" className="brand"><span className="brand-mark">G</span><span>gayathri<span className="brand-dot">.</span></span></a><p>Web Developer · Kozhikode, India</p><nav>{links.map(([label,id])=><a href={`#${id}`} key={id}>{label}</a>)}</nav><div className="footer-social"><a aria-label="GitHub" href="https://github.com/Gayathripremnath" target="_blank" rel="noreferrer"><GithubMark/></a><a aria-label="LinkedIn" href="https://www.linkedin.com/in/gayathri-premnathpv" target="_blank" rel="noreferrer"><LinkedinMark/></a><a aria-label="Back to top" href="#home"><ArrowUp size={16}/></a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Gayathri Premnath</span><span>Designed with care <i>✳</i></span></div></footer>}
