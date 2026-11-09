@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Menu, X, Sun, Moon, ArrowUpRight } from 'lucide-react'
 import '../styles/Navbar.css'
-const links = [['Home','home'],['About','about'],['Experience','experience'],['Skills','skills'],['Education','education'],['Projects','projects'],['Resume','resume'],['Contact','contact']]
+const links = [['Home','home'],['About','about'],['Experience','experience'],['Internship','internship'],['Skills','skills'],['Education','education'],['Projects','projects'],['Certifications','certifications'],['Resume','resume'],['Contact','contact']]
 export default function Navbar({theme,onTheme}) {
  const [open,setOpen]=useState(false); const [active,setActive]=useState('home')
  const go=(id)=>{setActive(id);setOpen(false);document.getElementById(id)?.scrollIntoView({behavior:'smooth'})}
